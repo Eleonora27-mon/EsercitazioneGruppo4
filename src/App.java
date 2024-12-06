@@ -12,10 +12,10 @@ public class App {
         punteggioPC = 0;
 
         // Dichiaro i Booleani
-        Boolean risposta;
+        Boolean risposta=true;
 
         System.out.println("Ti va di giocare?");
-        System.out.println("Tira i tuoi dadi!");
+    do {System.out.println("Tira i tuoi dadi!");
 
         // Ciclo for per lanciare 3 volte i dadi
         for (int i = 0; i <= 3; i++) {
@@ -62,5 +62,9 @@ public class App {
         } else {
             System.out.println("Hai vinto la partita!");
         }
-    }
+        System.out.println("Ti va di giocare ancora?");
+        risposta=sc.nextBoolean();
+    } while (risposta);
+    sc.close();
+}
 }
